@@ -255,11 +255,7 @@ if (!loggedIn) {
     {successMessage}
   </div>
 )}
-{formMessage && (
-  <div className="bg-green-100 text-green-700 p-3 rounded-lg mb-4 text-center font-semibold">
-    {formMessage}
-  </div>
-)}
+
   {errorMessage && (
     <div className="bg-red-100 text-red-700 p-3 rounded-lg mb-4 text-center font-semibold">
       ❌ {errorMessage}
@@ -271,7 +267,7 @@ if (!loggedIn) {
   </div>
 
         <h1 className="text-4xl font-extrabold text-center mb-2 bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
-  RAJMANDIR OFFER FORM
+  RAJMANDIR MATKA KING
 </h1>
 
 <p className="text-center text-gray-500">
@@ -330,12 +326,6 @@ return (
   className="w-full h-auto rounded-t-xl"
 />
           <div className="p-6 bg-gradient-to-b from-orange-50 to-white">
-            
-            {formMessage && (
-  <div className="bg-green-100 text-green-700 p-3 rounded-lg mb-4 text-center font-semibold">
-    {formMessage}
-  </div>
-)}
 
             <h1 className="text-4xl font-extrabold text-center text-white bg-orange-500 py-4 rounded-lg">
               RAJMANDIR OFFER FORM
@@ -356,7 +346,9 @@ return (
   placeholder="CUSTOMER NAME"
   value={customerName}
   onChange={(e) =>
-    setCustomerName(e.target.value.toUpperCase())
+    setCustomerName(
+      e.target.value.replace(/[^a-zA-Z\s]/g, "").toUpperCase()
+    )
   }
   className="w-full border rounded-lg p-3"
 />
@@ -488,6 +480,11 @@ return (
 />
   </div>
 ))}
+{formMessage && (
+  <div className="bg-green-100 text-green-700 p-3 rounded-lg mb-4 text-center font-semibold">
+    {formMessage}
+  </div>
+)}
 <button
   type="button"
   onClick={addItem}
@@ -503,7 +500,7 @@ return (
               <button
   type="button"
   onClick={submitForm}
-  className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg"
+  className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-extrabold text-lg"
 >
    
   Submit Form
