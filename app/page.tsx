@@ -205,6 +205,7 @@ const data = {
 };
 
 console.log(JSON.stringify(data, null, 2));
+console.timeEnd("submit");
 console.log("BEFORE FETCH");
 
 const response = await fetch(
@@ -225,7 +226,7 @@ setFormMessage("✅ FORM SUBMITTED SUCCESSFULLY");
 
 setTimeout(() => {
   setFormMessage("");
-}, 3000);
+}, 1000);
 
 // FORM RESET
 setCustomerName("");
