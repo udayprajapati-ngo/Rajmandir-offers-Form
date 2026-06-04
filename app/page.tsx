@@ -78,15 +78,16 @@ const schemes = [
   { name: "Amul Kool", value: 1 },
   { name: "Amul Butter 100gm", value: 1 },
   { name: "Britannia Cake", value: 1 },
-  { name: "Pure Room Freshener", value: 7 },
+  { name: "Poure Room Freshener", value: 7 },
   { name: "MDH Kitchen King", value: 7 },
   { name: "Haldiram Bujia 200gm", value: 1 },
   { name: "Khadi Soap MRP 78", value: 1 },
   { name: "Mangat Ram Poha 500gm", value: 7 },
   { name: "Maggi Noodles Single Pack", value: 1 },
   { name: "Thums Up 750ml", value: 7 },
-  { name: "Tata Tea Agni 1kg", value: 7 }
-
+  { name: "Tata Tea Agni 1kg", value: 7 },
+  { name: "Glass vigneto Bottle", value: 48 },
+  { name: "HyFUN Momos Mixed Veg mrp-165", value: 25 },
 ];
 const addItem = () => {
   setItems([
@@ -120,7 +121,7 @@ const users = {
   },
 
   SB: {
-    password: "4444",
+    password: "6666",
     store: "RMSB HYPERMARKET",
   },
 
@@ -130,7 +131,7 @@ const users = {
   },
 
   KB: {
-    password: "6666",
+    password: "4444",
     store: "RMKB HYPERMARKET",
   },
 };
