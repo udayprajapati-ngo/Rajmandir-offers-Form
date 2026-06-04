@@ -14,8 +14,9 @@ export default function Home() {
     scheme: "",
     qty: 1,
     value: 0,
+    cost: 0,
   },
-]);
+]); 
 
   const [mobileError, setMobileError] = useState("");
   const [billError, setBillError] = useState("");
@@ -35,59 +36,59 @@ const [successMessage, setSuccessMessage] = useState("");
   KB: "RMKB HYPERMARKET",
 };
 const schemes = [
-  { name: "Chana Dal", value: 7 },
-  { name: "Kala Chana", value: 7 },
-  { name: "Mangat Ram Besan 500gm", value: 1 },
-  { name: "Rajdhani Besan 1 Kg", value: 7 },
-  { name: "Roohafza 750 ml", value: 75 },
-  { name: "Fortune Soya 750 ml", value: 75 },
-  { name: "Softsens Baby Wipes", value: 7 },
-  { name: "Pringle", value: 7 },
-  { name: "Parle G 800gm", value: 7 },
-  { name: "Hully Gully", value: 1 },
-  { name: "Milton Bottle", value: 49 },
-  { name: "Yuvaid Gulab", value: 49 },
-  { name: "Coke 2 Ltr", value: 7 },
-  { name: "Sugar 1 Kg", value: 7 },
-  { name: "Ahaar Sooji", value: 1 },
-  { name: "Ahaar Maida", value: 1 },
-  { name: "Heinz Ketchup", value: 60 },
-  { name: "Kissan Ketchup 1.1 Kg", value: 7 },
-  { name: "Bambino Pasta 400gm", value: 7 },
-  { name: "Haldiram Bujia 1 Kg", value: 175 },
-  { name: "Dark Fantasy MRP 328", value: 75 },
-  { name: "Britannia Nutrichoice MRP 385", value: 75 },
-  { name: "Parle Marie", value: 39 },
-  { name: "Channa Saattu", value: 1 },
-  { name: "Bedmi Poori", value: 11 },
-  { name: "Dribble Oven 1 Pcs", value: 29 },
-  { name: "Color Dose Soap", value: 15 },
-  { name: "Orion Chocopie", value: 25 },
-  { name: "Veeba Mayonnaise 875gm", value: 49 },
-  { name: "Parle Melody Toffee", value: 15 },
-  { name: "Parle Kaccha Mango", value: 15 },
-  { name: "Yippee Noodles Box", value: 29 },
-  { name: "Wai Wai Cup Noodles", value: 1 },
-  { name: "Santoor Pack Of 4", value: 29 },
-  { name: "Real Juice Masala Mixed", value: 19 },
-  { name: "Haldiram Chips", value: 50 },
-  { name: "Smith & Jones Ketchup", value: 7 },
-  { name: "Home Foil 4 Meter", value: 1 },
-  { name: "Epigamia Milk Shake", value: 1 },
-  { name: "Beer Mug", value: 29 },
-  { name: "Amul Kool", value: 1 },
-  { name: "Amul Butter 100gm", value: 1 },
-  { name: "Britannia Cake", value: 1 },
-  { name: "Poure Room Freshener", value: 7 },
-  { name: "MDH Kitchen King", value: 7 },
-  { name: "Haldiram Bujia 200gm", value: 1 },
-  { name: "Khadi Soap MRP 78", value: 1 },
-  { name: "Mangat Ram Poha 500gm", value: 7 },
-  { name: "Maggi Noodles Single Pack", value: 1 },
-  { name: "Thums Up 750ml", value: 7 },
-  { name: "Tata Tea Agni 1kg", value: 7 },
-  { name: "Glass vigneto Bottle", value: 48 },
-  { name: "HyFUN Momos Mixed Veg mrp-165", value: 25 },
+  { name: "Chana Dal", value: 7, cost: 78 },
+  { name: "Kala Chana", value: 7, cost: 78 },
+  { name: "Mangat Ram Besan 500gm", value: 1, cost: 38 },
+  { name: "Rajdhani Besan 1 Kg", value: 7, cost: 85 },
+  { name: "Roohafza 750 ml", value: 75, cost: 140 },
+  { name: "Fortune Soya 750 ml", value: 75, cost: 140 },
+  { name: "Softsens Baby Wipes", value: 7, cost: 65 },
+  { name: "Pringle", value: 7, cost: 79 },
+  { name: "Parle G 800gm", value: 7, cost: 79 },
+  { name: "Hully Gully", value: 1, cost: 32 },
+  { name: "Milton Bottle", value: 49, cost: 115 },
+  { name: "Yuvaid Gulab", value: 49, cost: 70 },
+  { name: "Coke 2 Ltr", value: 7, cost: 68 },
+  { name: "Sugar 1 Kg", value: 7, cost: 46 },
+  { name: "Ahaar Sooji", value: 1, cost: 27 },
+  { name: "Ahaar Maida", value: 1, cost: 27 },
+  { name: "Heinz Ketchup", value: 60, cost: 140 },
+  { name: "Kissan Ketchup 1.1 Kg", value: 7, cost: 95 },
+  { name: "Bambino Pasta 400gm", value: 7, cost: 30 },
+  { name: "Haldiram Bujia 1 Kg", value: 175, cost: 242 },
+  { name: "Dark Fantasy MRP 328", value: 75, cost: 147 },
+  { name: "Britannia Nutrichoice MRP 385", value: 75, cost: 162 },
+  { name: "Parle Marie", value: 39, cost: 87 },
+  { name: "Channa Saattu", value: 1, cost: 41 },
+  { name: "Bedmi Poori", value: 11, cost: 53 },
+  { name: "Dribble Oven 1 Pcs", value: 29, cost: 90 },
+  { name: "Color Dose Soap", value: 15, cost: 50 },
+  { name: "Orion Chocopie", value: 25, cost: 65 },
+  { name: "Veeba Mayonnaise 875gm", value: 49, cost: 158 },
+  { name: "Parle Melody Toffee", value: 15, cost: 41 },
+  { name: "Parle Kaccha Mango", value: 15, cost: 41 },
+  { name: "Yippee Noodles Box", value: 29, cost: 60 },
+  { name: "Wai Wai Cup Noodles", value: 1, cost: 24 },
+  { name: "Santoor Pack Of 4", value: 29, cost: 80 },
+  { name: "Real Juice Masala Mixed", value: 19, cost: 68 },
+  { name: "Haldiram Chips", value: 50, cost: 22 },
+  { name: "Smith & Jones Ketchup", value: 7, cost: 45 },
+  { name: "Home Foil 4 Meter", value: 1, cost: 16 },
+  { name: "Epigamia Milk Shake", value: 1, cost: 17 },
+  { name: "Beer Mug", value: 29, cost: 75 },
+  { name: "Amul Kool", value: 1, cost: 22 },
+  { name: "Amul Butter 100gm", value: 1, cost: 55 },
+  { name: "Britannia Cake", value: 1, cost: 20 },
+  { name: "Poure Room Freshener", value: 7, cost: 65 },
+  { name: "MDH Kitchen King", value: 7, cost: 75 },
+  { name: "Haldiram Bujia 200gm", value: 1, cost: 50 },
+  { name: "Khadi Soap MRP 78", value: 1, cost: 15 },
+  { name: "Mangat Ram Poha 500gm", value: 7, cost: 32 },
+  { name: "Maggi Noodles Single Pack", value: 1, cost: 14 },
+  { name: "Thums Up 750ml", value: 7, cost: 27 },
+  { name: "Tata Tea Agni 1kg", value: 7, cost: 173 },
+  { name: "Glass vigneto Bottle", value: 48, cost: 48 },
+  { name: "HyFUN Momos Mixed Veg mrp-165", value: 25, cost: 50 }
 ];
 const addItem = () => {
   setItems([
@@ -96,12 +97,18 @@ const addItem = () => {
       scheme: "",
       qty: 1,
       value: 0,
+      cost: 0,
     },
   ]);
 };
 
-const totalValue = items.reduce(
+const totalAmount = items.reduce(
   (sum, item) => sum + item.qty * item.value,
+  0
+);
+
+const totalCost = items.reduce(
+  (sum, item) => sum + item.qty * item.cost,
   0
 );
 const users = {
@@ -156,15 +163,19 @@ const login = () => {
 };
   const submitForm = async () => {
   if (
-    !store ||
-    !customerName ||
-    !mobile ||
-    !billNumber ||
-    !billAmount
-  ) {
-    alert("PLEASE FILL ALL REQUIRED FIELDS");
-    return;
-  }
+  !customerName ||
+  !mobile ||
+  !billNumber ||
+  !billAmount ||
+  items.some(
+    (item) =>
+      !item.scheme ||
+      !item.qty
+  )
+) {
+  alert("PLEASE FILL ALL REQUIRED FIELDS");
+  return;
+}
 
   if (mobile.length !== 10) {
     alert("MOBILE NUMBER MUST BE 10 DIGITS");
@@ -176,12 +187,14 @@ const data = {
   mobile,
   billNumber,
   billAmount,
-  totalValue,
+  totalAmount,   // Total Scheme Value
   items,
 };
+
+console.log(JSON.stringify(data, null, 2));
 console.log("BEFORE FETCH");
 const response = await fetch(
-  "https://script.google.com/macros/s/AKfycbz3MjTkOPdPT4c8j-heveHHJQBP-mc3vC1tESldgindlWj7jGBcss1NTDUviR02p4Gr/exec",
+  "https://script.google.com/macros/s/AKfycbwKdfeTpdJuh8wvB3xr-k5L9BX89_F6dC_HsT0IqZMlgWcwNfHhYB4navdwv5ip1lg-Lw/exec",
   {
     method: "POST",
     mode: "no-cors",
@@ -206,6 +219,7 @@ setItems([
     scheme: "",
     qty: 1,
     value: 0,
+    cost: 0,
   },
 ]);
 
@@ -397,6 +411,7 @@ return (
         updated[index].value = selected
           ? selected.value
           : 0;
+          updated[index].cost = selected ? selected.cost : 0;
 
         setItems(updated);
       }}
@@ -448,15 +463,16 @@ return (
 </button>
 <div className="bg-green-100 border-2 border-green-500 rounded-lg p-4 text-center">
   <h2 className="text-2xl font-bold">
-    TOTAL SCHEME VALUE ₹ {totalValue}
+    TOTAL SCHEME VALUE ₹ {totalAmount}
   </h2>
 </div>
               <button
-                onClick={submitForm}
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg"
-              >
-                Submit Form
-              </button>
+  type="button"
+  onClick={submitForm}
+  className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg"
+>
+  Submit Form
+</button>
 
             </div>
 
