@@ -21,8 +21,11 @@ export default function Home() {
   const [mobileError, setMobileError] = useState("");
   const [billError, setBillError] = useState("");
   const [amountError, setAmountError] = useState("");
-  
+  const [errorMessage, setErrorMessage] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
+  const [loginMessage, setLoginMessage] = useState("");
+  const [formMessage, setFormMessage] = useState("");
+
 const [userId, setUserId] = useState("");
 const [password, setPassword] = useState("");
 const passwordRef = useRef<HTMLInputElement>(null);
@@ -144,22 +147,32 @@ const users = {
 };
 
 const login = () => {
-  setSuccessMessage("Login Successful");
+
   const user = users[userId as keyof typeof users];
   console.log("USER ID =", userId);
   console.log("PASSWORD =", password);
   console.log("USER =", user);
+
   if (!user) {
-    alert("INVALID USER ID");
-    return;
-  }
+  setSuccessMessage("");
+  alert("❌ USER ID NOT FOUND");
+  return;
+}
 
   if (user.password !== password) {
-    alert("WRONG PASSWORD");
-    return;
-  }
- setStore(user.store);
+  setSuccessMessage("");
+  setErrorMessage("❌ WRONG PASSWORD");
+  return;
+}
+ 
+ setErrorMessage("");
+setStore(user.store);
+setSuccessMessage("✅ LOGIN SUCCESSFUL");
+
+setTimeout(() => {
+  setSuccessMessage("");
   setLoggedIn(true);
+}, 1500);
 };
   const submitForm = async () => {
   if (
@@ -193,6 +206,7 @@ const data = {
 
 console.log(JSON.stringify(data, null, 2));
 console.log("BEFORE FETCH");
+
 const response = await fetch(
   "https://script.google.com/macros/s/AKfycbwKdfeTpdJuh8wvB3xr-k5L9BX89_F6dC_HsT0IqZMlgWcwNfHhYB4navdwv5ip1lg-Lw/exec",
   {
@@ -206,7 +220,12 @@ const response = await fetch(
 );
 
 console.log("FETCH DONE");
-console.log("FETCH DONE");
+
+setFormMessage("✅ FORM SUBMITTED SUCCESSFULLY");
+
+setTimeout(() => {
+  setFormMessage("");
+}, 3000);
 
 // FORM RESET
 setCustomerName("");
@@ -223,25 +242,34 @@ setItems([
   },
 ]);
 
-setSuccessMessage("✅ Data Saved Successfully");
-setSuccessMessage("✅ Data Saved Successfully");
-
-setSuccessMessage("✅ Data Saved Successfully");
 };
 
 if (!loggedIn) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 via-yellow-50 to-orange-100">
-      
+     
+<div className="bg-white p-8 rounded-3xl shadow-2xl w-[450px] space-y-5">
+
       {successMessage && (
   <div className="bg-green-100 text-green-700 p-3 rounded-lg mb-4 text-center font-semibold">
     {successMessage}
   </div>
 )}
-      <div className="bg-white p-8 rounded-3xl shadow-2xl w-[450px] space-y-5">
-         <div className="text-5xl text-center">
-  🔐
-</div>
+{formMessage && (
+  <div className="bg-green-100 text-green-700 p-3 rounded-lg mb-4 text-center font-semibold">
+    {formMessage}
+  </div>
+)}
+  {errorMessage && (
+    <div className="bg-red-100 text-red-700 p-3 rounded-lg mb-4 text-center font-semibold">
+      ❌ {errorMessage}
+    </div>
+  )}
+
+  <div className="text-5xl text-center">
+    🔐
+  </div>
+
         <h1 className="text-4xl font-extrabold text-center mb-2 bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
   RAJMANDIR OFFER FORM
 </h1>
@@ -302,6 +330,12 @@ return (
   className="w-full h-auto rounded-t-xl"
 />
           <div className="p-6 bg-gradient-to-b from-orange-50 to-white">
+            
+            {formMessage && (
+  <div className="bg-green-100 text-green-700 p-3 rounded-lg mb-4 text-center font-semibold">
+    {formMessage}
+  </div>
+)}
 
             <h1 className="text-4xl font-extrabold text-center text-white bg-orange-500 py-4 rounded-lg">
               RAJMANDIR OFFER FORM
@@ -471,6 +505,7 @@ return (
   onClick={submitForm}
   className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg"
 >
+   
   Submit Form
 </button>
 
