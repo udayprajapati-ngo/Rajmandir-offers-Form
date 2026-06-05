@@ -27,6 +27,8 @@ export default function Home() {
   const [formMessage, setFormMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const itemNameRef = useRef<HTMLInputElement>(null);
+  const schemeRef = useRef<HTMLSelectElement>(null);
 
 const [userId, setUserId] = useState("");
 const [password, setPassword] = useState("");
@@ -373,11 +375,18 @@ return (
       e.target.value.replace(/[^a-zA-Z\s]/g, "").toUpperCase()
     )
   }
+  onKeyDown={(e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    document.getElementById("mobile")?.focus();
+  }
+}}
   className="w-full border rounded-lg p-3"
 />
   <input
   type="text"
   placeholder="MOBILE NUMBER"
+  id="mobile"
   maxLength={10}
   value={mobile}
   onChange={(e) => {
@@ -390,6 +399,13 @@ return (
       setMobileError("");
     }
   }}
+
+  onKeyDown={(e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    document.getElementById("billNumber")?.focus();
+  }
+}}
   className="w-full border rounded-lg p-3"
 />
 
@@ -399,6 +415,7 @@ return (
 
  <input
   type="text"
+  id="billNumber"
   placeholder="BILL NUMBER"
   value={billNumber}
   onChange={(e) => {
@@ -411,6 +428,12 @@ return (
       setBillError("ONLY NUMBERS ALLOWED");
     }
   }}
+  onKeyDown={(e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    document.getElementById("billAmount")?.focus();
+  }
+}}
   className="w-full border rounded-lg p-3"
 />
 
@@ -418,6 +441,7 @@ return (
   <p className="text-red-600 text-sm">{billError}</p>
 )}
  <input
+ id="billAmount"
   type="text"
   placeholder="BILL AMOUNT ₹"
   value={billAmount}
@@ -431,6 +455,12 @@ return (
       setAmountError("ENTER VALID AMOUNT");
     }
   }}
+  onKeyDown={(e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    schemeRef.current?.focus();
+  }
+}}
   className="w-full border rounded-lg p-3"
 />
 
@@ -457,6 +487,7 @@ return (
   </button>
 )}
     <select
+      ref={index === 0 ? schemeRef : null}
       value={item.scheme}
       onChange={(e) => {
         const selected = schemes.find(
