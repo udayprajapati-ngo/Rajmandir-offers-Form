@@ -25,6 +25,8 @@ export default function Home() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [loginMessage, setLoginMessage] = useState("");
   const [formMessage, setFormMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
 const [userId, setUserId] = useState("");
 const [password, setPassword] = useState("");
@@ -180,6 +182,14 @@ setTimeout(() => {
 }, 1500);
 };
   const submitForm = async () => {
+
+  if (submitted) return;
+
+  if (loading) return;
+
+  setLoading(true);
+    
+    
   if (
   !customerName ||
   !mobile ||
@@ -227,10 +237,14 @@ const response = await fetch(
 
 console.log("FETCH DONE");
 
+setSubmitted(true);
+
 setFormMessage("✅ FORM SUBMITTED SUCCESSFULLY");
+setLoading(false);
 
 setTimeout(() => {
   setFormMessage("");
+  setSubmitted(false);
 }, 1000);
 
 // FORM RESET
@@ -502,16 +516,22 @@ return (
   <h2 className="text-2xl font-bold">
     TOTAL SCHEME VALUE ₹ {totalAmount}
   </h2>
-</div>
-              <button
+</div><button
   type="button"
   onClick={submitForm}
-  className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-extrabold text-lg"
+  disabled={loading || submitted}
+  className={`w-full py-3 rounded-lg font-extrabold text-lg text-white ${
+    loading
+      ? "bg-gray-400 cursor-not-allowed"
+      : "bg-orange-600 hover:bg-orange-700"
+  }`}
 >
-   
-  Submit Form
+  {submitted
+  ? "Submitted Successfully ✓"
+  : loading
+  ? "Submitting..."
+  : "Submit Form"}
 </button>
-
             </div>
 
           </div>
