@@ -56,7 +56,7 @@ const schemes = [
   { name: "Dribble Oven 1 Pcs", value: 29, cost: 90 },
   { name: "Epigamia Milk Shake", value: 1, cost: 17 },
   { name: "Fortune Soya 750 ml", value: 75, cost: 140 },
-  { name: "Glass vigneto Bottle", value: 48, cost: 48 },
+  { name: "Glass vigneto Bottle", value: 19, cost: 48 },
   { name: "Haldiram Bujia 1 Kg", value: 175, cost: 242 },
   { name: "Haldiram Bujia 200gm", value: 1, cost: 50 },
   { name: "Haldiram Chips", value: 1, cost: 22 },
@@ -70,7 +70,7 @@ const schemes = [
   { name: "Maggi Noodles Single Pack", value: 1, cost: 14 },
   { name: "Mangat Ram Besan 500gm", value: 1, cost: 38 },
   { name: "Mangat Ram Poha 500gm", value: 1, cost: 32 },
-  { name: "MDH Kitchen King", value: 7, cost: 75 },
+  { name: "MDH Kitchen King", value: 1, cost: 75 },
   { name: "Milton Bottle", value: 49, cost: 115 },
   { name: "Orion Chocopie", value: 25, cost: 65 },
   { name: "Parle G 800gm", value: 7, cost: 79 },
@@ -86,13 +86,13 @@ const schemes = [
   { name: "Smith & Jones Ketchup", value: 1, cost: 45 },
   { name: "Softsens Baby Wipes", value: 7, cost: 65 },
   { name: "Sugar 1 Kg Value @1", value: 1, cost: 46 },
- { name: "Sugar 1 Kg Value @7", value: 7, cost: 46 },
+  { name: "Sugar 1 Kg Value @7", value: 7, cost: 46 },
   { name: "Tata Tea Agni 1kg", value: 75, cost: 173 },
   { name: "Thums Up 750ml", value: 1, cost: 27 },
   { name: "Veeba Mayonnaise 875gm", value: 49, cost: 158 },
   { name: "Wai Wai Cup Noodles", value: 1, cost: 24 },
   { name: "Yippee Noodles Box", value: 29, cost: 60 },
-  { name: "Yuvaid Gulab", value: 49, cost: 70 }
+  { name: "Yuvaid Gulab", value: 29, cost: 70 }
 ];
 const addItem = () => {
   setItems([
