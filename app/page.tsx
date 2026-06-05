@@ -112,7 +112,7 @@ const addItem = () => {
   ]);
 };
 
-const removeItem = (indexToRemove) => {
+const removeItem = (indexToRemove: number) => {
   setItems(items.filter((_, index) => index !== indexToRemove));
 };
 
@@ -451,7 +451,7 @@ return (
   <button
     type="button"
     onClick={() => removeItem(index)}
-    className="bg-red-500 text-white px-3 py-1 rounded"
+    className="bg-red-500 text-white px-3 py-2 rounded mb-2"
   >
     ❌ Remove Item
   </button>
