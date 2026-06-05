@@ -184,7 +184,6 @@ setTimeout(() => {
   const submitForm = async () => {
 
   if (submitted) return;
-
   if (loading) return;
 
   setLoading(true);
@@ -220,7 +219,7 @@ const data = {
 };
 
 console.log(JSON.stringify(data, null, 2));
-console.timeEnd("submit");
+
 console.log("BEFORE FETCH");
 
 const response = await fetch(
