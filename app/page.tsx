@@ -75,6 +75,7 @@ const schemes = [
   { name: "MDH Kitchen King", value: 1, cost: 75 },
   { name: "Milton Bottle", value: 49, cost: 115 },
   { name: "Orion Chocopie", value: 25, cost: 65 },
+  { name: "Odonil Mrp 58", value: 0, cost: 51 },
   { name: "Parle G 800gm", value: 7, cost: 79 },
   { name: "Parle Kaccha Mango", value: 15, cost: 41 },
   { name: "Parle Marie", value: 39, cost: 87 },
