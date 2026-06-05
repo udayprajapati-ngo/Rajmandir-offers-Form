@@ -112,6 +112,10 @@ const addItem = () => {
   ]);
 };
 
+const removeItem = (indexToRemove) => {
+  setItems(items.filter((_, index) => index !== indexToRemove));
+};
+
 const totalAmount = items.reduce(
   (sum, item) => sum + item.qty * item.value,
   0
@@ -443,6 +447,15 @@ return (
       ITEM {index + 1}
     </h3>
 
+{index > 0 && (
+  <button
+    type="button"
+    onClick={() => removeItem(index)}
+    className="bg-red-500 text-white px-3 py-1 rounded"
+  >
+    ❌ Remove Item
+  </button>
+)}
     <select
       value={item.scheme}
       onChange={(e) => {
