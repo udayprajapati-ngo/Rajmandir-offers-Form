@@ -82,6 +82,7 @@ const schemes = [
   { name: "Parle Melody Toffee", value: 15, cost: 41 },
   { name: "Poure Room Freshener", value: 7, cost: 65 },
   { name: "Pringle", value: 7, cost: 79 },
+  { name: "Pears Soap Mrp 10", value: 1, cost: 4 },
   { name: "Rajdhani Besan 1 Kg", value: 7, cost: 85 },
   { name: "Real Juice Masala Mixed", value: 19, cost: 68 },
   { name: "Roohafza 750 ml", value: 75, cost: 140 },
