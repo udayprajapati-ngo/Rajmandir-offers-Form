@@ -86,6 +86,7 @@ const schemes = [
   { name: "Smith & Jones Ketchup", value: 7, cost: 45 },
   { name: "Softsens Baby Wipes", value: 7, cost: 65 },
   { name: "Sugar 1 Kg", value: 1, cost: 46 },
+ { name: "Sugar 1 Kg Value @7", value: 7, cost: 46 },
   { name: "Tata Tea Agni 1kg", value: 75, cost: 173 },
   { name: "Thums Up 750ml", value: 1, cost: 27 },
   { name: "Veeba Mayonnaise 875gm", value: 49, cost: 158 },
