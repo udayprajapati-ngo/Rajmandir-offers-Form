@@ -54,7 +54,7 @@ const schemes = [
   { name: "Britannia Nutrichoice MRP 385", value: 75, cost: 162 },
   { name: "Chana Dal", value: 7, cost: 78 },
   { name: "Channa Saattu", value: 1, cost: 41 },
-  { name: "Thums Up 740ml", value: 7, cost: 27 },
+  { name: "Coke 740ml", value: 7, cost: 27 },
   { name: "Coke 2 Ltr", value: 7, cost: 68 },
   { name: "Camay soap Mrp 70", value: 1, cost: 16 },
   { name: "Color Dose Soap", value: 15, cost: 50 },
