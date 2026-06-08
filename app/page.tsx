@@ -52,6 +52,7 @@ const schemes = [
   { name: "Beer Mug", value: 29, cost: 75 },
   { name: "Britannia Cake", value: 1, cost: 20 },
   { name: "Britannia Nutrichoice MRP 385", value: 75, cost: 162 },
+  { name: "Budweiser Mrp 115", value: 1, cost: 15 },
   { name: "Chana Dal", value: 7, cost: 78 },
   { name: "Channa Saattu", value: 1, cost: 41 },
   { name: "Coke 740ml", value: 1, cost: 27 },
