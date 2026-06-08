@@ -131,6 +131,12 @@ const totalCost = items.reduce(
   (sum, item) => sum + item.qty * item.cost,
   0
 );
+const difference = Math.abs(totalAmount - totalCost);
+
+const differencePercent =
+  billAmount && Number(billAmount) > 0
+    ? ((difference / Number(billAmount)) * 100).toFixed(2)
+    : 0;
 const users = {
   AV: {
     password: "1111",
@@ -225,6 +231,9 @@ const data = {
   billNumber,
   billAmount,
   totalAmount,   // Total Scheme Value
+  totalCost,
+  difference,
+  differencePercent,
   items,
 };
 
@@ -563,7 +572,9 @@ return (
   <h2 className="text-2xl font-bold">
     TOTAL SCHEME VALUE ₹ {totalAmount}
   </h2>
-</div><button
+</div>
+
+<button
   type="button"
   onClick={submitForm}
   disabled={loading || submitted}
