@@ -102,6 +102,7 @@ const schemes = [
   { name: "Thums Up 740ml", value: 1, cost: 27 },
   { name: "Veeba Mayonnaise 875gm", value: 49, cost: 158 },
   { name: "Wai Wai Cup Noodles", value: 1, cost: 24 },
+  { name: "Wizer Combo Mrp 125", value: 1, cost: 21 },
   { name: "Yippee Noodles Box", value: 29, cost: 60 },
   { name: "Yuvaid Gulab", value: 29, cost: 70 }
 ];
