@@ -81,6 +81,7 @@ const schemes = [
   { name: "Khadi Soap MRP 78", value: 1, cost: 15 },
   { name: "Kissan Ketchup 1.1 Kg", value: 7, cost: 95 },
   { name: "Maggi Noodles Single Pack", value: 1, cost: 14 },
+  { name: "Maggi Noodles 4 Pack Mrp 58", value: 15, cost: 53.20 },
   { name: "Mangat Ram Besan 500gm", value: 1, cost: 38 },
   { name: "Mangat Ram Poha 500gm", value: 1, cost: 32 },
   { name: "MDH Kitchen King", value: 1, cost: 75 },
