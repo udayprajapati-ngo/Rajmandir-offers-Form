@@ -255,7 +255,7 @@ console.log(JSON.stringify(data, null, 2));
 console.log("BEFORE FETCH");
 
 const response = await fetch(
-  "https://script.google.com/macros/s/AKfycbwKdfeTpdJuh8wvB3xr-k5L9BX89_F6dC_HsT0IqZMlgWcwNfHhYB4navdwv5ip1lg-Lw/exec",
+  "https://script.google.com/macros/s/AKfycbweSNJCLRt9-Qf6imOvX90ramTRiFziYEjdiA9v0LqmWiY4VOmz-f5P2oXu1xPMm71rnA/exec",
   {
     method: "POST",
     mode: "no-cors",
