@@ -74,7 +74,7 @@ const schemes = [
   { name: "Glass vigneto Bottle", value: 19, cost: 48 },
   { name: "Garnier Vitamin-c Serum Mask Mrp 115", value: 20, cost: 0 },
   { name: "Kelyn Bathing Bar Mrp 75", value: 1, cost: 18 },
-  { name: "Klaw Rowdy Rasam Mrp 30", value: 5, cost: 5 },
+  { name: "Klaw Rowdy Rasam Mrp 30", value: 1, cost: 5 },
   { name: "Haldiram Bujia 1 Kg", value: 175, cost: 242 },
   { name: "Haldiram Bujia 200gm", value: 1, cost: 50 },
   { name: "Haldiram Chips", value: 1, cost: 22 },
