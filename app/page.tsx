@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Select from "react-select";
 
 export default function Home() {
 
@@ -523,39 +524,39 @@ return (
     ❌ Remove Item
   </button>
 )}
-    <select
-      ref={index === 0 ? schemeRef : null}
-      value={item.scheme}
-      onChange={(e) => {
-        const selected = schemes.find(
-          (s) => s.name === e.target.value
-        );
+   <Select
+  options={schemes.map((s) => ({
+    value: s.name,
+    label: s.name,
+  }))}
+  value={
+    item.scheme
+      ? {
+          value: item.scheme,
+          label: item.scheme,
+        }
+      : null
+  }
+  onChange={(selectedOption) => {
+    if (!selectedOption) return;
 
-        const updated = [...items];
+    const selected = schemes.find(
+      (s) => s.name === selectedOption.value
+    );
 
-        updated[index].scheme = e.target.value;
-        updated[index].value = selected
-          ? selected.value
-          : 0;
-          updated[index].cost = selected ? selected.cost : 0;
+    const updated = [...items];
 
-        setItems(updated);
-      }}
-      className="w-full border rounded-lg p-3"
-    >
-      <option value="">
-        SELECT ITEM
-      </option>
+    updated[index].scheme = selectedOption.value;
+    updated[index].value = selected ? selected.value : 0;
+    updated[index].cost = selected ? selected.cost : 0;
 
-      {schemes.map((s) => (
-        <option
-          key={s.name}
-          value={s.name}
-        >
-          {s.name}
-        </option>
-      ))}
-    </select>
+    setItems(updated);
+  }}
+  placeholder="🔍 Search Item..."
+  isSearchable
+  className="w-full"
+  classNamePrefix="react-select"
+/>
 
     <input
       type="number"
