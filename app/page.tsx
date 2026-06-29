@@ -84,6 +84,7 @@ const schemes = [
   { name: "Hully Gully", value: 1, cost: 32 },
   { name: "HyFUN Momos Mixed Veg mrp-165", value: 25, cost: 50 },
   { name: "Hello Bum Bum Wipes Mrp 199", value: 10, cost: 32 },
+  { name: "IHP Toilet Cleaner Mrp 199", value: 10, cost: 1 },
   { name: "Kala Chana", value: 7, cost: 78 },
   { name: "Khadi Soap MRP 78", value: 1, cost: 15 },
   { name: "Kissan Ketchup 1.1 Kg", value: 7, cost: 95 },
