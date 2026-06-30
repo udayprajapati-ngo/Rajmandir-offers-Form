@@ -48,6 +48,7 @@ const schemes = [
   { name: "Ahaar Sooji", value: 1, cost: 27 },
   { name: "Amul Butter 100gm", value: 1, cost: 55 },
   { name: "Amul Kool", value: 1, cost: 22 },
+  { name: "Amma's Idli /Dosa Batter Mrp 55", value: 1, cost: 7 },
   { name: "Bambino Pasta 400gm Value @7 ", value: 7, cost: 30 },
   { name: "Bambino Pasta 400gm Value @1 ", value: 1, cost: 30 },
   { name: "Bedmi Poori", value: 11, cost: 53 },
