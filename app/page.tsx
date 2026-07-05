@@ -107,9 +107,11 @@ const schemes = [
   { name: "Parle Melody Toffee", value: 15, cost: 41 },
   { name: "Poure Room Freshener", value: 7, cost: 65 },
   { name: "Pringle", value: 7, cost: 79 },
-  { name: "Pears Soap Mrp 10", value: 1, cost: 4 },
+  { name: "Pears Soap Mrp 10", value: .5, cost: 4 },
   { name: "Pablo Shaving Foam Mrp 210", value: 19, cost: 45 },
   { name: "Papyrus Classic White Tissues Mrp 149", value: 10, cost: 31 },
+  { name: "Pansari Darjeeling black tea Mrp 250", value: 20, cost: 88 },
+  { name: "Pansari Darjeeling Green tea Mrp 199", value: 20, cost: 70 },
   { name: "Rajdhani Besan 1 Kg", value: 7, cost: 85 },
   { name: "Real Juice Masala Mixed", value: 19, cost: 68 },
   { name: "Roohafza 750 ml", value: 75, cost: 140 },
@@ -121,6 +123,7 @@ const schemes = [
   { name: "Sani Fresh Mrp 235", value: 25, cost: 92 },
   { name: "Sun Crush Mango Drink Mrp 30", value: 1, cost: 10 },
   { name: "Santoor Shower Gel Mrp 135", value: 29, cost: 0 },
+  { name: "Santoor Safe Wash Matic Liquid Mrp 10", value: 0, cost: 0 },
   { name: "Tata Tea Agni 1kg", value: 75, cost: 173 },
   { name: "Thums Up 740ml", value: 1, cost: 27 },
   { name: "Tata Garam Masala 100gm Mrp 105", value: 7, cost: 63 },
@@ -551,6 +554,12 @@ return (
     updated[index].scheme = selectedOption.value;
     updated[index].value = selected ? selected.value : 0;
     updated[index].cost = selected ? selected.cost : 0;
+    updated[index].qty =
+  selectedOption.value === "Santoor Safe Wash Matic Liquid Mrp 10"
+    ? 4
+    : selectedOption.value === "Pears Soap Mrp 10"
+    ? 2
+    : 1;
 
     setItems(updated);
   }}
