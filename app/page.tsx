@@ -234,8 +234,7 @@ setTimeout(() => {
 
   setLoading(true);
     
-    
-  if (
+     if (
   !customerName ||
   !mobile ||
   !billNumber ||
@@ -247,13 +246,15 @@ setTimeout(() => {
   )
 ) {
   alert("PLEASE FILL ALL REQUIRED FIELDS");
+  setLoading(false);
   return;
 }
 
-  if (mobile.length !== 10) {
-    alert("MOBILE NUMBER MUST BE 10 DIGITS");
-    return;
-  }
+ if (mobile.length !== 10) {
+  alert("MOBILE NUMBER MUST BE 10 DIGITS");
+  setLoading(false);
+  return;
+}
 const data = {
   store,
   customerName,
