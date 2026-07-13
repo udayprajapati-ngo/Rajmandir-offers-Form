@@ -97,6 +97,7 @@ const schemes = [
   { name: "MDH Kitchen King", value: 1, cost: 75 },
   { name: "Milton Bottle", value: 49, cost: 115 },
   { name: "Mcvities Digestive Mrp ₹ 199", value: 49, cost: 85 },
+  { name: "Mill jowar Puff Mrp ₹ 55", value: 1, cost: 6.6 },
   { name: "Nestle Kit KatMrp 30", value: 10, cost: 26.18 },
   { name: "Orion Chocopie", value: 25, cost: 65 },
   { name: "Odonil Mrp 58", value: 0, cost: 51 },
