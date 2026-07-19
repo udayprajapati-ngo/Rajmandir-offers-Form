@@ -81,6 +81,7 @@ const schemes = [
   { name: "Haldiram Bujia 1 Kg", value: 175, cost: 242 },
   { name: "Haldiram Bujia 200gm", value: 1, cost: 50 },
   { name: "Haldiram Chips", value: 1, cost: 22 },
+  { name: "Haldiram Bhelpuri 110gm Mrp 50", value: 5, cost: 22 },
   { name: "Heinz Ketchup", value: 60, cost: 140 },
   { name: "Home Foil 4 Meter", value: 1, cost: 16 },
   { name: "Hully Gully", value: 1, cost: 32 },
