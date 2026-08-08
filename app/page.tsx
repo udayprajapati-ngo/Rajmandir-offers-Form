@@ -121,6 +121,7 @@ const schemes = [
   { name: "Roohafza 750 ml", value: 75, cost: 140 },
   { name: "Santoor Pack Of 4", value: 29, cost: 80 },
   { name: "Smith & Jones Ketchup", value: 1, cost: 45 },
+  { name: "Smith & Jones Ginger garlic paste 300gm Mrp 75", value: 15, cost: 32 },
   { name: "Softsens Baby Wipes", value: 7, cost: 65 },
   { name: "Sugar 1 Kg Value @1", value: 1, cost: 46 },
   { name: "Sugar 1 Kg Value @7", value: 7, cost: 46 },
