@@ -148,6 +148,7 @@ const schemes = [
   { name: "Wagh Bakri Ice Tea Mrp 120", value: 7, cost: 45 },
   { name: "Wicked Gud Mrp 60 value @1", value: 1, cost: 9 },
   { name: "Wicked Gud Mrp 60 value @5", value: 5, cost: 9 },
+  { name: "Wicked Gud 53.5gm Mrp 120 ", value: 10, cost: 18 },
   { name: "Yippee Noodles Box", value: 29, cost: 60 },
   { name: "Yuvaid Gulab", value: 29, cost: 70 }
 ];
