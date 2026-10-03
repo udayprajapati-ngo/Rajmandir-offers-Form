@@ -125,6 +125,7 @@ const schemes = [
   { name: "Pansari Darjeeling Green tea Mrp 199", value: 20, cost: 70 },
   { name: "Pansari Classic Assam Black tea Mrp 175", value: 25, cost: 61.50 },
   { name: "Rajdhani Besan 1 Kg", value: 7, cost: 85 },
+  { name: "Rajdhani macaroni 200gm Mrp 31", value: 7, cost: 0 },
   { name: "Real Juice Masala Mixed", value: 19, cost: 68 },
   { name: "Roohafza 750 ml", value: 75, cost: 140 },
   { name: "Santoor Pack Of 4", value: 29, cost: 80 },
@@ -149,6 +150,7 @@ const schemes = [
   { name: "Wicked Gud Mrp 60 value @1", value: 1, cost: 9 },
   { name: "Wicked Gud Mrp 60 value @5", value: 5, cost: 9 },
   { name: "Wicked Gud 53.5gm Mrp 120 ", value: 10, cost: 18 },
+  { name: "Wicked Gud Pasta 400gm Mrp 220 ", value: 10, cost: 33 },
   { name: "Yippee Noodles Box", value: 29, cost: 60 },
   { name: "Yuvaid Gulab", value: 29, cost: 70 }
 ];
